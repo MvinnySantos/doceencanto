@@ -215,8 +215,10 @@
         overflow: hidden;
         position: relative;
         margin-bottom: 2rem;
+        /* Remova ou ajuste a margem superior negativa */
         margin-top: -70px;
       }
+
       .video video {
         width: 100%;
         height: auto;
@@ -281,7 +283,6 @@
     </style>
   </head>
   <body>
-    
     <header>
       <!-- Substitua "logo.png" com o caminho da sua imagem de logo -->
 
@@ -292,7 +293,6 @@
 
       <!-- Substitua "logo.png" com o caminho da sua imagem de logo -->
     </header>
-
     <div class="container">
       <div class="hero">
         <h2>Transformando Cada Momento em Doces Memórias</h2>
@@ -304,7 +304,7 @@
 
       <section>
         <div class="video">
-          <video src="Video.mp4" autoplay loop muted></video>
+          <video src="Video.mp4" autoplay loop muted playsinline></video>
         </div>
       </section>
 
@@ -480,15 +480,15 @@
               </option>
             </select>
 
-              <label for="quantity">Quantidade:</label>
-              <input
-                type="number"
-                id="quantity"
-                name="quantity"
-                min="1"
-                value="1"
-                required
-              />
+            <label for="quantity">Quantidade:</label>
+            <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              min="1"
+              value="1"
+              required
+            />
 
             <button type="button" onclick="sendOrder()">Enviar Pedido</button>
           </form>
@@ -499,14 +499,16 @@
         <h2>Como Funciona</h2>
         <ol>
           <li>
-            <strong>Escolha Seu Bolo ou Fatia:</strong> Navegue pelos nossos sabores.
+            <strong>Escolha Seu Bolo ou Fatia:</strong> Navegue pelos nossos
+            sabores.
           </li>
           <li>
             <strong>Escolha a Data e Hora:</strong> Escolha quando você gostaria
             de receber seu bolo.
           </li>
           <li>
-            <strong>Pagamento:</strong> Pague de forma segura utilizando Dinhairo, Pix, cartão de Debito e Credito.
+            <strong>Pagamento:</strong> Pague de forma segura utilizando
+            Dinhairo, Pix, cartão de Debito e Credito.
           </li>
           <li>
             <strong>Receba em Casa:</strong> Entregamos diretamente na sua porta
