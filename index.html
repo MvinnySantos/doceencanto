@@ -577,34 +577,37 @@
       <p>Desenvolvido por Vinicius Santos | Contato: (71) 98682-1061</p>
     </footer>
 
-   <script>
+    <script>
         document.getElementById("productType").addEventListener("change", function () {
           var productType = this.value;
           var cakeOptions = document.querySelectorAll(".cakeOption");
           var sliceOptions = document.querySelectorAll(".sliceOption");
-    
-          cakeOptions.forEach(option => {
-            option.style.display = productType === "Bolo" || productType === "" ? "block" : "none";
+  
+          cakeOptions.forEach((option) => {
+            option.style.display = productType === "Bolo" ? "block" : "none";
           });
-    
-          sliceOptions.forEach(option => {
-            option.style.display = productType === "Fatia" || productType === "" ? "block" : "none";
+  
+          sliceOptions.forEach((option) => {
+            option.style.display = productType === "Fatia" ? "block" : "none";
           });
+  
+          // Resetear o sabor selecionado se o tipo de produto for alterado
+          document.getElementById("cakeFlavor").value = "";
         });
-    
+  
         function sendOrder() {
           var productType = document.getElementById("productType").value;
           var cakeFlavor = document.getElementById("cakeFlavor").value;
           var quantity = document.getElementById("quantity").value;
-    
+  
           if (!productType || !cakeFlavor || !quantity) {
             alert("Por favor, preencha todos os campos.");
             return;
           }
-    
+  
           var message = `Olá, gostaria de fazer um pedido:\n\nTipo: ${productType}\nSabor: ${cakeFlavor}\nQuantidade: ${quantity}\n\nObrigado!`;
           var whatsappUrl = `https://wa.me/5571986821061?text=${encodeURIComponent(message)}`;
-    
+  
           window.open(whatsappUrl, "_blank");
         }
       </script>
