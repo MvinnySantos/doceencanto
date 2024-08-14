@@ -826,18 +826,20 @@
 function sendOrder() {
   const productType = document.getElementById('productType').value;
   const selectedOptions = [...document.querySelectorAll('.cakeOption:checked, .sliceOption:checked')];
-  
+  const quantity = document.getElementById('quantity').value; // Captura o valor da quantidade
+
   // Construa a mensagem para o WhatsApp
-  let message = `Pedido:\nTipo de Produto: ${productType}\nOpções Selecionadas:\n`;
+  let message = `Olá, gostaria de fazer um pedido.\n\nTipo: ${productType}\n\nSabor: `;
 
   selectedOptions.forEach(option => {
-    message += `- ${option.value}\n`;
+    message += `${option.value}\n`;
   });
+
+  message += `\nQuantidade: ${quantity}`;
 
   // Encode a mensagem para a URL do WhatsApp
   const encodedMessage = encodeURIComponent(message);
 
- 
   const phoneNumber = '5571986821061';  // Substitua pelo número de destino
 
   // Monta o link para envio no WhatsApp
