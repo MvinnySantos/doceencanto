@@ -180,27 +180,30 @@
     .delivery-form button:hover {
       background-color: #ff1493;
     }
+    /* Estilos para o botão do WhatsApp */
+.whatsapp-button {
+    position: fixed;               /* Mantém o botão fixo na tela */
+    right: 20px;                   /* Distância da borda direita da tela */
+    bottom: 20px;                  /* Distância da borda inferior da tela */
+    background-color: #25D366;     /* Cor verde característica do WhatsApp */
+    border-radius: 50%;            /* Torna o botão circular */
+    padding: 10px;                 /* Espaçamento interno ao redor da imagem */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve para dar profundidade */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Transição suave para efeito de hover */
+    z-index: 1000;                 /* Garante que o botão esteja acima de outros conteúdos */
+}
 
-    .whatsapp-button {
-      display: inline-block;
-      background-color: #25d366;
-      color: white;
-      padding: 0.7rem 1.2rem;
-      border-radius: 8px;
-      text-decoration: none;
-      font-size: 1rem;
-      font-weight: bold;
-      text-align: center;
-      transition: background-color 0.3s ease;
-      position: fixed;
-      bottom: 1rem;
-      right: 1rem;
-      box-shadow: 0 0 8px rgba(0, 0, 0, 0.2);
-    }
+.whatsapp-button img {
+    width: 50px;                   /* Tamanho da imagem do ícone */
+    height: 50px;                  /* Manter a imagem quadrada */
+    display: block;                /* Remove o espaço extra embaixo da imagem */
+}
 
-    .whatsapp-button:hover {
-      background-color: #128c7e;
-    }
+.whatsapp-button:hover {
+    background-color: #128C7E;     /* Cor verde mais escura ao passar o mouse */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada ao passar o mouse */
+}
+
 
     footer {
       background-color: #ff69b4;
@@ -462,33 +465,12 @@
       text-decoration: underline;
       /* Sublinhado ao passar o mouse */
     }
+    /* Adiciona este CSS para ocultar as opções que não devem ser exibidas inicialmente */
+    .cakeOption,
+    .sliceOption {
+     display: none;
+     }
 
-    /* Estilo para o botão do WhatsApp */
-    .whatsapp-button {
-      display: inline-block;
-      padding: 10px 20px;
-      margin-top: 15px;
-      background-color: #25D366;
-      /* Cor verde do WhatsApp */
-      color: #fff;
-      /* Cor do texto do botão */
-      border-radius: 5px;
-      /* Bordas arredondadas */
-      text-decoration: none;
-      /* Remove o sublinhado */
-      font-weight: bold;
-      /* Negrito */
-      text-align: center;
-      /* Centraliza o texto */
-      font-size: 1em;
-      /* Tamanho da fonte */
-    }
-
-    /* Estilo para o botão do WhatsApp ao passar o mouse */
-    .whatsapp-button:hover {
-      background-color: #1EBE5F;
-      /* Cor verde mais escura ao passar o mouse */
-    }
   </style>
 </head>
 
@@ -734,9 +716,12 @@
         <a href="mailto:contato@doceencanto.com.br">contato@doceencanto.com.br</a>
       </p>
       <p><strong>Endereço:</strong> Rua das Delícias, 00, Salvador - BA</p>
-      <a href="https://wa.me/5571986821061" class="whatsapp-button" target="_blank">WhatsApp</a>
     </section>
-
+      <section>
+        <a href="https://wa.me/5571986821061" class="whatsapp-button" target="_blank">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+        </a>
+      </section>
     <section>
       <h2>Siga-nos nas Redes Sociais</h2>
       <div class="social-links">
@@ -752,7 +737,6 @@
   </div>
 
   <footer>
-    <p>Doce Encanto - Transformando Momentos em Doces Memórias.</p>
     <p>&copy; 2024 Doce Encanto. Todos os direitos reservados.</p>
     <p>Desenvolvido por Vinicius Santos | Contato: (71) 98682-1061</p>
   </footer>
@@ -768,23 +752,20 @@
     const selectedType = productTypeSelect.value;
 
     cakeOptions.forEach(option => {
-      option.style.display = (selectedType === 'Bolo' || selectedType === 'Bolo') ? 'block' : 'none';
+      option.style.display = (selectedType === 'Bolo' || selectedType === '') ? 'block' : 'none';
     });
 
     sliceOptions.forEach(option => {
-      option.style.display = (selectedType === 'Fatia' || selectedType === 'Fatia') ? 'block' : 'none';
+      option.style.display = (selectedType === 'Fatia' || selectedType === '') ? 'block' : 'none';
     });
   }
 
-  // Adicionando eventos para garantir a captura em dispositivos móveis
-  productTypeSelect.addEventListener('change', filterOptions);
-  productTypeSelect.addEventListener('click', filterOptions);
-  productTypeSelect.addEventListener('touchend', filterOptions);
+  // Adiciona o evento de 'input' para capturar mudanças, incluindo em dispositivos móveis
+  productTypeSelect.addEventListener('input', filterOptions);
 
   // Inicializa o filtro com o valor padrão selecionado
   filterOptions();
 });
-
 function sendOrder() {
   const productType = document.getElementById('productType').value;
   const selectedOptions = [...document.querySelectorAll('.cakeOption:checked, .sliceOption:checked')];
