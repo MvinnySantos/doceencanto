@@ -350,7 +350,120 @@
         padding: 0.4rem 0.8rem;
       }
     }
-     
+     /* Estilo para a seção de formas de pagamento */
+.payment-section {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 100%px; /* Limita a largura máxima da seção */
+  background-color: #f9f9f9; /* Cor de fundo suave */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  text-align: center; /* Centraliza o texto e o conteúdo */
+}
+
+/* Estilo para o título da seção */
+.payment-section h2 {
+  margin-bottom: 15px;
+  color: #333; /* Cor do texto do título */
+  font-size: 1.5em; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito */
+}
+
+/* Estilo para o contêiner da imagem */
+.image-container {
+  display: flex;
+  justify-content: center; /* Centraliza a imagem horizontalmente */
+  margin-top: 10px; /* Espaço acima do contêiner da imagem */
+}
+
+/* Estilo para a imagem */
+.image-container img {
+  max-width: 30%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+  height: auto; /* Mantém a proporção da imagem */
+  border-radius: 8px; /* Bordas arredondadas na imagem */
+}
+/* Estilo para a seção de depoimentos */
+.testimonial-section {
+  margin: 20px auto;
+  padding: 20px;
+  max-width: 100%; /* Limita a largura máxima da seção */
+  background-color: #f9f9f9; /* Cor de fundo */
+  border-radius: 8px; /* Bordas arredondadas */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Estilo para o título da seção de depoimentos */
+.testimonial-section h2 {
+  margin-bottom: 15px;
+  color: #333; /* Cor do texto do título */
+  font-size: 1.5em; /* Tamanho da fonte */
+  font-weight: bold; /* Negrito */
+  text-align: center; /* Centraliza o título */
+}
+
+/* Estilo para cada bloco de depoimento */
+.testimonial {
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: #fff; /* Fundo branco para destacar o depoimento */
+  border-left: 4px solid #4CAF50; /* Linha lateral verde para destaque */
+  border-radius: 4px; /* Bordas arredondadas */
+}
+
+/* Estilo para o texto dentro dos depoimentos */
+.testimonial p {
+  margin: 0; /* Remove a margem padrão */
+  color: #555; /* Cor do texto dos depoimentos */
+  font-size: 1em; /* Tamanho da fonte */
+  font-style: italic; /* Estilo em itálico */
+}
+/* Estilo para a seção de contato */
+.contact-section {
+  padding: 20px;
+  background-color: #f9f9f9; /* Cor de fundo igual à seção de formas de pagamento */
+  border-radius: 8px; /* Bordas arredondadas */
+  max-width: 100%; /* Limita a largura máxima da seção */
+  margin: 20px auto; /* Centraliza a seção horizontalmente */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Estilo para o texto da seção de contato */
+.contact-section p {
+  margin: 10px 0; /* Margem entre os parágrafos */
+  color: #333; /* Cor do texto */
+  font-size: 1em; /* Tamanho da fonte */
+}
+
+/* Estilo para o link de email */
+.contact-section a {
+  color: #007BFF; /* Cor azul para links */
+  text-decoration: none; /* Remove o sublinhado dos links */
+}
+
+/* Estilo para o link de email ao passar o mouse */
+.contact-section a:hover {
+  text-decoration: underline; /* Sublinhado ao passar o mouse */
+}
+
+/* Estilo para o botão do WhatsApp */
+.whatsapp-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 15px;
+  background-color: #25D366; /* Cor verde do WhatsApp */
+  color: #fff; /* Cor do texto do botão */
+  border-radius: 5px; /* Bordas arredondadas */
+  text-decoration: none; /* Remove o sublinhado */
+  font-weight: bold; /* Negrito */
+  text-align: center; /* Centraliza o texto */
+  font-size: 1em; /* Tamanho da fonte */
+}
+
+/* Estilo para o botão do WhatsApp ao passar o mouse */
+.whatsapp-button:hover {
+  background-color: #1EBE5F; /* Cor verde mais escura ao passar o mouse */
+}
+
   </style>
 </head>
 
@@ -478,7 +591,6 @@
     </section>
 
     <section>
-      <h2>Selecione Seu Pedido</h2>
       <div class="order-form">
         <h2>Faça Seu Pedido</h2>
         <form id="orderForm">
@@ -556,27 +668,30 @@
         </div>
       </div>
     </section>
+    <h2>Formas de Pagamento</h2>
+    <section class="payment-section">
+      
+      <div class="image-container">
+        <img src="pagamento.jpeg" alt="Formas de Pagamento">
+      </div>
+    </section>
     
-
-
-    <section>
-      <h2>Depoimentos</h2>
+    <h2>Depoimentos</h2>
+    <section class="testimonial-section">
       <div class="testimonial">
         <p>
-          "Os bolos da Doce Encanto são simplesmente maravilhosos! Perfeitos
-          para qualquer ocasião." - <strong>Beatriz C.</strong>
+          "Os bolos da Doce Encanto são simplesmente maravilhosos! Perfeitos para qualquer ocasião." - <strong>Beatriz C.</strong>
         </p>
       </div>
       <div class="testimonial">
         <p>
-          "Um verdadeiro deleite para o paladar. Recomendo a todos que amam um
-          bom bolo." - <strong>João P.</strong>
+          "Um verdadeiro deleite para o paladar. Recomendo a todos que amam um bom bolo." - <strong>João P.</strong>
         </p>
       </div>
     </section>
-
-    <section>
-      <h2>Entre em Contato</h2>
+    
+    <h2>Entre em Contato</h2>
+    <section class="contact-section">
       <p>Tem alguma dúvida ou precisa de ajuda? Entre em contato conosco!</p>
       <p><strong>Telefone:</strong> (71) 98682-1061</p>
       <p>
@@ -586,7 +701,7 @@
       <p><strong>Endereço:</strong> Rua das Delícias, 00, Salvador - BA</p>
       <a href="https://wa.me/5571986821061" class="whatsapp-button" target="_blank">WhatsApp</a>
     </section>
-
+    
     <section>
       <h2>Siga-nos nas Redes Sociais</h2>
       <div class="social-links">
@@ -608,6 +723,7 @@
   </footer>
 
   <script>
+    document.addEventListener("DOMContentLoaded", function () {
     document.getElementById("productType").addEventListener("change", function () {
       var productType = this.value;
       var cakeOptions = document.querySelectorAll(".cakeOption");
@@ -625,7 +741,7 @@
       document.getElementById("cakeFlavor").value = "";
     });
 
-    function sendOrder() {
+    document.querySelector("button[type='button']").addEventListener("click", function() {
       var productType = document.getElementById("productType").value;
       var cakeFlavor = document.getElementById("cakeFlavor").value;
       var quantity = document.getElementById("quantity").value;
@@ -636,10 +752,10 @@
       }
 
       var message = `Olá, gostaria de fazer um pedido:\n\nTipo: ${productType}\nSabor: ${cakeFlavor}\nQuantidade: ${quantity}\n\nObrigado!`;
-      var whatsappUrl = `https://wa.me/5571986821061?text=${encodeURIComponent(message)}`;
-
+      var whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
       window.open(whatsappUrl, "_blank");
-    }
+    });
+    });
 
     // CEP
     document.getElementById('cep').addEventListener('blur', function () {
