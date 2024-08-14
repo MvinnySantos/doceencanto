@@ -1,84 +1,46 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Doce Encanto - Bolos e Fatias Sob Medida</title>
-  <style>
-    body {
-      font-family: "Arial", sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f2f2f2;
-      color: #333;
-      margin-top: 80px;
-      /* Deve ser igual à altura do cabeçalho */
-    }
-
-    header {
-      position: fixed;
-      /* Altere para 'fixed' para que o cabeçalho fique fixo no topo */
-      top: 0;
-      /* Garante que o cabeçalho fique no topo */
-      left: 0;
-      /* Alinha o cabeçalho à esquerda */
-      width: 100%;
-      /* Garante que o cabeçalho ocupe toda a largura da página */
-      background-color: #ff69b4;
-      /* Ajuste conforme a cor desejada */
-      color: white;
-      padding: 1rem;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      z-index: 1000;
-      /* Garante que o cabeçalho fique acima de outros elementos */
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-      /* Opcional: sombra para destacar o cabeçalho */
-      height: 80px;
-      /* Ajuste conforme necessário */
-    }
-
-    .header-text {
-      display: flex;
-      align-items: center;
-      text-align: center;
-      /* Alinha a imagem e o texto verticalmente */
-      justify-content: center;
-      /* Centraliza o conteúdo dentro do header-text */
-    }
-
-    /* Estilo para a imagem */
-    .header-text img {
-      max-height: 90px;
-      /* Ajuste o tamanho da imagem conforme necessário */
-      margin-right: 10px;
-      margin-left: 10px;
-      /* Espaço entre a imagem e o texto */
-      object-fit: contain;
-      /* Garante que a imagem mantenha sua proporção */
-    }
-
-    /* Estilo para o título e descrição */
-    .header-text h1 {
-      margin: 0;
-      text-align: center;
-      font-size: 2em;
-      /* Ajuste o tamanho do texto conforme necessário */
-      color: #FFFFFF;
-      /* Ajuste a cor do texto conforme necessário */
-    }
-
-    .header-text p {
-      margin: 0;
-      font-size: 1em;
-      /* Ajuste o tamanho do texto conforme necessário */
-      color: #FFFFFF;
-      /* Ajuste a cor do texto conforme necessário */
-    }
-
-    .container {
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doce Encanto - Bolos e Fatias Sob Medida</title>
+    <style>
+      body {
+        font-family: "Arial", sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f2f2f2;
+        color: #333;
+        margin-top: 80px; /* Deve ser igual à altura do cabeçalho */
+      }
+      header {
+        position: fixed; /* Altere para 'fixed' para que o cabeçalho fique fixo no topo */
+        top: 0; /* Garante que o cabeçalho fique no topo */
+        left: 0; /* Alinha o cabeçalho à esquerda */
+        width: 100%; /* Garante que o cabeçalho ocupe toda a largura da página */
+        background-color: #ff69b4; /* Ajuste conforme a cor desejada */
+        color: white;
+        padding: 1rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Opcional: sombra para destacar o cabeçalho */
+        height: 80px; /* Ajuste conforme necessário */
+      }
+      .header-text {
+        text-align: center;
+        flex: 1;
+      }
+      header h1 {
+        margin: 0;
+        font-size: 2.5rem;
+      }
+      header p {
+        margin: 0.5rem 0;
+        font-size: 1.2rem;
+      }
+      .container {
       width: 90%;
       max-width: 1200px;
       margin: 0 auto;
@@ -806,11 +768,11 @@
     const selectedType = productTypeSelect.value;
 
     cakeOptions.forEach(option => {
-      option.style.display = (selectedType === 'Bolo' || selectedType === '') ? 'block' : 'none';
+      option.style.display = (selectedType === 'Bolo' || selectedType === 'Bolo') ? 'block' : 'none';
     });
 
     sliceOptions.forEach(option => {
-      option.style.display = (selectedType === 'Fatia' || selectedType === '') ? 'block' : 'none';
+      option.style.display = (selectedType === 'Fatia' || selectedType === 'Fatia') ? 'block' : 'none';
     });
   }
 
