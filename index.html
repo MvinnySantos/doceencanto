@@ -41,806 +41,895 @@
         font-size: 1.2rem;
       }
       .container {
-      width: 90%;
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 1.5rem;
-      background-color: #fff;
-      border-radius: 8px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .hero {
-      background-image: url("https://example.com/hero-image.jpg");
-      /* Substitua com a URL da imagem desejada */
-      background-size: cover;
-      background-position: center;
-      color: white;
-      padding: 4rem 1.5rem;
-      text-align: center;
-      border-radius: 8px;
-      margin-bottom: 2rem;
-    }
-
-    .hero h2 {
-      font-size: 2.5rem;
-      margin-bottom: 0.5rem;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-    }
-
-    .products-container,
-    .slices-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-
-    .product,
-    .slice {
-      background-color: #f9f9f9;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      overflow: hidden;
-      max-width: 300px;
-      width: 100%;
-      margin-bottom: 2rem;
-      text-align: center;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-
-    .product:hover,
-    .slice:hover {
-      transform: scale(1.05);
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
-    }
-
-    .product img,
-    .slice img {
-      width: 100%;
-      height: auto;
-      border-bottom: 1px solid #ddd;
-    }
-
-    .product-info,
-    .slice-info {
-      padding: 1rem;
-    }
-
-    .product-info h3,
-    .slice-info h3 {
-      margin: 0;
-      color: #ff69b4;
-      font-size: 1.5rem;
-    }
-
-    .product-info p,
-    .slice-info p {
-      margin: 0.5rem 0;
-    }
-
-    .price {
-      font-size: 1.2rem;
-      color: #ff69b4;
-      font-weight: bold;
-    }
-
-    .order-form,
-    .delivery-form {
-      margin: 2rem 0;
-      padding: 1rem;
-      background-color: #f9f9f9;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-
-    .order-form h2,
-    .delivery-form h2 {
-      margin-top: 0;
-    }
-
-    .order-form label,
-    .delivery-form label {
-      display: block;
-      margin: 0.5rem 0;
-    }
-
-    .order-form select,
-    .order-form input,
-    .delivery-form input {
-      padding: 0.8rem;
-      font-size: 1rem;
-      border-radius: 4px;
-      border: 1px solid #ddd;
-      margin-top: 0.5rem;
-      width: 100%;
-      box-sizing: border-box;
-      /* Inclui padding e borda na largura total */
-    }
-
-    .order-form button,
-    .delivery-form button {
-      padding: 0.8rem;
-      font-size: 1rem;
-      border-radius: 4px;
-      border: none;
-      background-color: #ff69b4;
-      color: white;
-      cursor: pointer;
-      font-weight: bold;
-      transition: background-color 0.3s ease;
-      margin-top: 1rem;
-    }
-
-    .order-form button:hover,
-    .delivery-form button:hover {
-      background-color: #ff1493;
-    }
-    /* Estilos para o botão do WhatsApp */
-.whatsapp-button {
-    position: fixed;               /* Mantém o botão fixo na tela */
-    right: 20px;                   /* Distância da borda direita da tela */
-    bottom: 20px;                  /* Distância da borda inferior da tela */
-    background-color: #25D366;     /* Cor verde característica do WhatsApp */
-    border-radius: 50%;            /* Torna o botão circular */
-    padding: 10px;                 /* Espaçamento interno ao redor da imagem */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve para dar profundidade */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Transição suave para efeito de hover */
-    z-index: 1000;                 /* Garante que o botão esteja acima de outros conteúdos */
-}
-
-.whatsapp-button img {
-    width: 50px;                   /* Tamanho da imagem do ícone */
-    height: 50px;                  /* Manter a imagem quadrada */
-    display: block;                /* Remove o espaço extra embaixo da imagem */
-}
-
-.whatsapp-button:hover {
-    background-color: #128C7E;     /* Cor verde mais escura ao passar o mouse */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada ao passar o mouse */
-}
-
-
-    footer {
-      background-color: #ff69b4;
-      color: white;
-      padding: 1.5rem;
-      text-align: center;
-      margin-top: 2rem;
-    }
-
-    footer p {
-      margin: 0;
-      font-size: 1.2rem;
-    }
-
-    .social-links {
-      margin-top: 1rem;
-    }
-
-    .social-links a {
-      margin: 0 0.5rem;
-      display: inline-block;
-      transition: transform 0.3s ease, opacity 0.3s ease;
-    }
-
-    .social-links a img {
-      width: 40px;
-      height: 40px;
-    }
-
-    .social-links a:hover {
-      transform: scale(1.1);
-      opacity: 0.8;
-    }
-
-    .video {
-      width: 100%;
-      max-height: 900px;
-      /* Ajuste conforme necessário */
-      overflow: hidden;
-      position: relative;
-      margin-bottom: 2rem;
-      /* Remova ou ajuste a margem superior negativa */
-      margin-top: -70px;
-    }
-
-    .video video {
-      width: 100%;
-      height: auto;
-      display: block;
-    }
-
-    .hero {
-      color: black;
-      margin-top: -50px;
-    }
-
-    .delivery-form img {
-      width: 100px;
-      height: auto;
-      margin-bottom: 1rem;
-    }
-
-    @media (max-width: 768px) {
-      header h1 {
-        font-size: 2rem;
+        width: 90%;
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 1.5rem;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
       }
 
-      header p {
-        font-size: 1rem;
+      .hero {
+        background-image: url("https://example.com/hero-image.jpg");
+        /* Substitua com a URL da imagem desejada */
+        background-size: cover;
+        background-position: center;
+        color: white;
+        padding: 4rem 1.5rem;
+        text-align: center;
+        border-radius: 8px;
+        margin-bottom: 2rem;
       }
 
       .hero h2 {
-        font-size: 2rem;
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
       }
 
       .hero p {
-        font-size: 1rem;
-      }
-
-      .product-info h3,
-      .slice-info h3 {
         font-size: 1.2rem;
       }
 
-      .price {
-        font-size: 1rem;
+      .products-container,
+      .slices-container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+        justify-content: center;
       }
 
-      .whatsapp-button {
-        font-size: 0.9rem;
-        padding: 0.5rem 1rem;
-      }
-    }
-
-    @media (max-width: 480px) {
-      header h1 {
-        font-size: 1.5rem;
-      }
-
-      header p {
-        font-size: 0.9rem;
-      }
-
-      .hero h2 {
-        font-size: 1.5rem;
+      .product,
+      .slice {
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        overflow: hidden;
+        max-width: 300px;
+        width: 100%;
+        margin-bottom: 2rem;
+        text-align: center;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
       }
 
-      .hero p {
-        font-size: 0.9rem;
+      .product:hover,
+      .slice:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+      }
+
+      .product img,
+      .slice img {
+        width: 100%;
+        height: auto;
+        border-bottom: 1px solid #ddd;
+      }
+
+      .product-info,
+      .slice-info {
+        padding: 1rem;
       }
 
       .product-info h3,
       .slice-info h3 {
-        font-size: 1rem;
+        margin: 0;
+        color: #ff69b4;
+        font-size: 1.5rem;
+      }
+
+      .product-info p,
+      .slice-info p {
+        margin: 0.5rem 0;
       }
 
       .price {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
+        color: #ff69b4;
+        font-weight: bold;
       }
 
+      .order-form,
+      .delivery-form {
+        margin: 2rem 0;
+        padding: 1rem;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .order-form h2,
+      .delivery-form h2 {
+        margin-top: 0;
+      }
+
+      .order-form label,
+      .delivery-form label {
+        display: block;
+        margin: 0.5rem 0;
+      }
+
+      .order-form select,
+      .order-form input,
+      .delivery-form input {
+        padding: 0.8rem;
+        font-size: 1rem;
+        border-radius: 4px;
+        border: 1px solid #ddd;
+        margin-top: 0.5rem;
+        width: 100%;
+        box-sizing: border-box;
+        /* Inclui padding e borda na largura total */
+      }
+
+      .order-form button,
+      .delivery-form button {
+        padding: 0.8rem;
+        font-size: 1rem;
+        border-radius: 4px;
+        border: none;
+        background-color: #ff69b4;
+        color: white;
+        cursor: pointer;
+        font-weight: bold;
+        transition: background-color 0.3s ease;
+        margin-top: 1rem;
+      }
+
+      .order-form button:hover,
+      .delivery-form button:hover {
+        background-color: #ff1493;
+      }
+      /* Estilos para o botão do WhatsApp */
       .whatsapp-button {
-        font-size: 0.8rem;
-        padding: 0.4rem 0.8rem;
+        position: fixed; /* Mantém o botão fixo na tela */
+        right: 20px; /* Distância da borda direita da tela */
+        bottom: 20px; /* Distância da borda inferior da tela */
+        background-color: #25d366; /* Cor verde característica do WhatsApp */
+        border-radius: 50%; /* Torna o botão circular */
+        padding: 10px; /* Espaçamento interno ao redor da imagem */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra leve para dar profundidade */
+        transition: background-color 0.3s, box-shadow 0.3s; /* Transição suave para efeito de hover */
+        z-index: 1000; /* Garante que o botão esteja acima de outros conteúdos */
       }
-    }
 
-    /* Estilo para a seção de formas de pagamento */
-    .payment-section {
-      margin: 20px auto;
-      padding: 20px;
-      max-width: 100%px;
-      /* Limita a largura máxima da seção */
-      background-color: #f9f9f9;
-      /* Cor de fundo suave */
-      border-radius: 8px;
-      /* Bordas arredondadas */
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      /* Sombra leve */
-      text-align: center;
-      /* Centraliza o texto e o conteúdo */
-    }
+      .whatsapp-button img {
+        width: 50px; /* Tamanho da imagem do ícone */
+        height: 50px; /* Manter a imagem quadrada */
+        display: block; /* Remove o espaço extra embaixo da imagem */
+      }
 
-    /* Estilo para o título da seção */
-    .payment-section h2 {
-      margin-bottom: 15px;
-      color: #333;
-      /* Cor do texto do título */
-      font-size: 1.5em;
-      /* Tamanho da fonte */
-      font-weight: bold;
-      /* Negrito */
-    }
+      .whatsapp-button:hover {
+        background-color: #128c7e; /* Cor verde mais escura ao passar o mouse */
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra mais pronunciada ao passar o mouse */
+      }
 
-    /* Estilo para o contêiner da imagem */
-    .image-container {
-      display: flex;
-      justify-content: center;
-      /* Centraliza a imagem horizontalmente */
-      margin-top: 10px;
-      /* Espaço acima do contêiner da imagem */
-    }
+      footer {
+        background-color: #ff69b4;
+        color: white;
+        padding: 1.5rem;
+        text-align: center;
+        margin-top: 2rem;
+      }
 
-    /* Estilo para a imagem */
-    .image-container img {
-      max-width: 30%;
-      /* Garante que a imagem não ultrapasse a largura do contêiner */
-      height: auto;
-      /* Mantém a proporção da imagem */
-      border-radius: 8px;
-      /* Bordas arredondadas na imagem */
-    }
+      footer p {
+        margin: 0;
+        font-size: 1.2rem;
+      }
 
-    /* Estilo para a seção de depoimentos */
-    .testimonial-section {
-      margin: 20px auto;
-      padding: 20px;
-      max-width: 100%;
-      /* Limita a largura máxima da seção */
-      background-color: #f9f9f9;
-      /* Cor de fundo */
-      border-radius: 8px;
-      /* Bordas arredondadas */
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      /* Sombra leve */
-    }
+      .social-links {
+        margin-top: 1rem;
+      }
 
-    /* Estilo para o título da seção de depoimentos */
-    .testimonial-section h2 {
-      margin-bottom: 15px;
-      color: #333;
-      /* Cor do texto do título */
-      font-size: 1.5em;
-      /* Tamanho da fonte */
-      font-weight: bold;
-      /* Negrito */
-      text-align: center;
-      /* Centraliza o título */
-    }
+      .social-links a {
+        margin: 0 0.5rem;
+        display: inline-block;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
 
-    /* Estilo para cada bloco de depoimento */
-    .testimonial {
-      margin-bottom: 15px;
-      padding: 10px;
-      background-color: #fff;
-      /* Fundo branco para destacar o depoimento */
-      border-left: 4px solid #4CAF50;
-      /* Linha lateral verde para destaque */
-      border-radius: 4px;
-      /* Bordas arredondadas */
-    }
+      .social-links a img {
+        width: 40px;
+        height: 40px;
+      }
 
-    /* Estilo para o texto dentro dos depoimentos */
-    .testimonial p {
-      margin: 0;
-      /* Remove a margem padrão */
-      color: #555;
-      /* Cor do texto dos depoimentos */
-      font-size: 1em;
-      /* Tamanho da fonte */
-      font-style: italic;
-      /* Estilo em itálico */
-    }
+      .social-links a:hover {
+        transform: scale(1.1);
+        opacity: 0.8;
+      }
 
-    /* Estilo para a seção de contato */
-    .contact-section {
-      padding: 20px;
-      background-color: #f9f9f9;
-      /* Cor de fundo igual à seção de formas de pagamento */
-      border-radius: 8px;
-      /* Bordas arredondadas */
-      max-width: 100%;
-      /* Limita a largura máxima da seção */
-      margin: 20px auto;
-      /* Centraliza a seção horizontalmente */
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-      /* Sombra leve */
-    }
+      .video {
+        width: 100%;
+        max-height: 900px;
+        /* Ajuste conforme necessário */
+        overflow: hidden;
+        position: relative;
+        margin-bottom: 2rem;
+        /* Remova ou ajuste a margem superior negativa */
+        margin-top: -70px;
+      }
 
-    /* Estilo para o texto da seção de contato */
-    .contact-section p {
-      margin: 10px 0;
-      /* Margem entre os parágrafos */
-      color: #333;
-      /* Cor do texto */
-      font-size: 1em;
-      /* Tamanho da fonte */
-    }
+      .video video {
+        width: 100%;
+        height: auto;
+        display: block;
+      }
 
-    /* Estilo para o link de email */
-    .contact-section a {
-      color: #007BFF;
-      /* Cor azul para links */
-      text-decoration: none;
-      /* Remove o sublinhado dos links */
-    }
+      .hero {
+        color: black;
+        margin-top: -50px;
+      }
 
-    /* Estilo para o link de email ao passar o mouse */
-    .contact-section a:hover {
-      text-decoration: underline;
-      /* Sublinhado ao passar o mouse */
-    }
-    /* Adiciona este CSS para ocultar as opções que não devem ser exibidas inicialmente */
-    .cakeOption,
-    .sliceOption {
-     display: none;
-     }
-     a {
-    text-decoration: none; /* Remove o sublinhado */
-    color: inherit; /* Herda a cor do texto do pai */
-}
+      .delivery-form img {
+        width: 100px;
+        height: auto;
+        margin-bottom: 1rem;
+      }
 
-  </style>
-</head>
+      @media (max-width: 768px) {
+        header h1 {
+          font-size: 2rem;
+        }
 
-<body>
-  <header>
-    <!-- Substitua "logo.png" com o caminho da sua imagem de logo -->
-    <div class="header-text">
-      <div>
-        <!--<img src="logo.jpeg" alt="">-->
-      </div>
-      <div>
-        <a href="index.html">
+        header p {
+          font-size: 1rem;
+        }
+
+        .hero h2 {
+          font-size: 2rem;
+        }
+
+        .hero p {
+          font-size: 1rem;
+        }
+
+        .product-info h3,
+        .slice-info h3 {
+          font-size: 1.2rem;
+        }
+
+        .price {
+          font-size: 1rem;
+        }
+
+        .whatsapp-button {
+          font-size: 0.9rem;
+          padding: 0.5rem 1rem;
+        }
+      }
+
+      @media (max-width: 480px) {
+        header h1 {
+          font-size: 1.5rem;
+        }
+
+        header p {
+          font-size: 0.9rem;
+        }
+
+        .hero h2 {
+          font-size: 1.5rem;
+        }
+
+        .hero p {
+          font-size: 0.9rem;
+        }
+
+        .product-info h3,
+        .slice-info h3 {
+          font-size: 1rem;
+        }
+
+        .price {
+          font-size: 0.9rem;
+        }
+
+        .whatsapp-button {
+          font-size: 0.8rem;
+          padding: 0.4rem 0.8rem;
+        }
+      }
+
+      /* Estilo para a seção de formas de pagamento */
+      .payment-section {
+        margin: 20px auto;
+        padding: 20px;
+        max-width: 100%px;
+        /* Limita a largura máxima da seção */
+        background-color: #f9f9f9;
+        /* Cor de fundo suave */
+        border-radius: 8px;
+        /* Bordas arredondadas */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* Sombra leve */
+        text-align: center;
+        /* Centraliza o texto e o conteúdo */
+      }
+
+      /* Estilo para o título da seção */
+      .payment-section h2 {
+        margin-bottom: 15px;
+        color: #333;
+        /* Cor do texto do título */
+        font-size: 1.5em;
+        /* Tamanho da fonte */
+        font-weight: bold;
+        /* Negrito */
+      }
+
+      /* Estilo para o contêiner da imagem */
+      .image-container {
+        display: flex;
+        justify-content: center;
+        /* Centraliza a imagem horizontalmente */
+        margin-top: 10px;
+        /* Espaço acima do contêiner da imagem */
+      }
+
+      /* Estilo para a imagem */
+      .image-container img {
+        max-width: 30%;
+        /* Garante que a imagem não ultrapasse a largura do contêiner */
+        height: auto;
+        /* Mantém a proporção da imagem */
+        border-radius: 8px;
+        /* Bordas arredondadas na imagem */
+      }
+
+      /* Estilo para a seção de depoimentos */
+      .testimonial-section {
+        margin: 20px auto;
+        padding: 20px;
+        max-width: 100%;
+        /* Limita a largura máxima da seção */
+        background-color: #f9f9f9;
+        /* Cor de fundo */
+        border-radius: 8px;
+        /* Bordas arredondadas */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* Sombra leve */
+      }
+
+      /* Estilo para o título da seção de depoimentos */
+      .testimonial-section h2 {
+        margin-bottom: 15px;
+        color: #333;
+        /* Cor do texto do título */
+        font-size: 1.5em;
+        /* Tamanho da fonte */
+        font-weight: bold;
+        /* Negrito */
+        text-align: center;
+        /* Centraliza o título */
+      }
+
+      /* Estilo para cada bloco de depoimento */
+      .testimonial {
+        margin-bottom: 15px;
+        padding: 10px;
+        background-color: #fff;
+        /* Fundo branco para destacar o depoimento */
+        border-left: 4px solid #4caf50;
+        /* Linha lateral verde para destaque */
+        border-radius: 4px;
+        /* Bordas arredondadas */
+      }
+
+      /* Estilo para o texto dentro dos depoimentos */
+      .testimonial p {
+        margin: 0;
+        /* Remove a margem padrão */
+        color: #555;
+        /* Cor do texto dos depoimentos */
+        font-size: 1em;
+        /* Tamanho da fonte */
+        font-style: italic;
+        /* Estilo em itálico */
+      }
+
+      /* Estilo para a seção de contato */
+      .contact-section {
+        padding: 20px;
+        background-color: #f9f9f9;
+        /* Cor de fundo igual à seção de formas de pagamento */
+        border-radius: 8px;
+        /* Bordas arredondadas */
+        max-width: 100%;
+        /* Limita a largura máxima da seção */
+        margin: 20px auto;
+        /* Centraliza a seção horizontalmente */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        /* Sombra leve */
+      }
+
+      /* Estilo para o texto da seção de contato */
+      .contact-section p {
+        margin: 10px 0;
+        /* Margem entre os parágrafos */
+        color: #333;
+        /* Cor do texto */
+        font-size: 1em;
+        /* Tamanho da fonte */
+      }
+
+      /* Estilo para o link de email */
+      .contact-section a {
+        color: #007bff;
+        /* Cor azul para links */
+        text-decoration: none;
+        /* Remove o sublinhado dos links */
+      }
+
+      /* Estilo para o link de email ao passar o mouse */
+      .contact-section a:hover {
+        text-decoration: underline;
+        /* Sublinhado ao passar o mouse */
+      }
+      /* Adiciona este CSS para ocultar as opções que não devem ser exibidas inicialmente */
+      .cakeOption,
+      .sliceOption {
+        display: none;
+      }
+      a {
+        text-decoration: none; /* Remove o sublinhado */
+        color: inherit; /* Herda a cor do texto do pai */
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <!-- Substitua "logo.png" com o caminho da sua imagem de logo -->
+      <div class="header-text">
+        <div>
+          <!--<img src="logo.jpeg" alt="">-->
+        </div>
+        <div>
+          <a href="index.html">
             <h1>Doce Encanto</h1>
-        </a>
-        <p>Bolos e Fatias Sob Medida para Toda Ocasião</p>
-    </div>
-      <div>
-        <!--<img src="logo.jpeg" alt="">-->
-      </div>
-    </div>
-
-
-    <!-- Substitua "logo.png" com o caminho da sua imagem de logo -->
-  </header>
-  <div class="container">
-    <div class="hero">
-      <h2>Transformando Cada Momento em Doces Memórias</h2>
-      <p>
-        Delicie-se com nossos bolos e fatias artesanais feitos com
-        ingredientes frescos e muito amor.
-      </p>
-    </div>
-
-    <section>
-      <div class="video">
-        <video src="Video.mp4" autoplay loop muted playsinline></video>
-      </div>
-    </section>
-
-    <section>
-      <h2>Nossos Bolos</h2>
-      <div class="products-container">
-        <div class="product">
-          <img src="Bolo de Chocolate Belga.jpeg" alt="Bolo de Chocolate Belga" />
-          <div class="product-info">
-            <h3>Bolo de Chocolate Belga</h3>
-            <p>
-              Camadas de bolo de chocolate com recheio cremoso e cobertura de
-              ganache.
-            </p>
-            <p class="price">A partir de R$ 90,00</p>
-          </div>
+          </a>
+          <p>Bolos e Fatias Sob Medida para Toda Ocasião</p>
         </div>
-
-        <div class="product">
-          <img src="Bolo de Cenoura com Cobertura de Chocolate.jpeg" alt="Bolo de Cenoura com Cobertura de Chocolate" />
-          <div class="product-info">
-            <h3>Bolo de Cenoura com Cobertura de Chocolate</h3>
-            <p>
-              Bolo fofinho de cenoura com cobertura de chocolate meio amargo e
-              nozes.
-            </p>
-            <p class="price">A partir de R$ 80,00</p>
-          </div>
-        </div>
-
-        <div class="product">
-          <img src="Bolo Red Velvet.jpeg" alt="Bolo Red Velvet" />
-          <div class="product-info">
-            <h3>Bolo Red Velvet</h3>
-            <p>
-              Bolo de massa leve e vermelha com recheio de cream cheese e
-              cobertura de veludo.
-            </p>
-            <p class="price">A partir de R$ 95,00</p>
-          </div>
-        </div>
-
-        <div class="product">
-          <img src="Bolo de Baunilha com Morango.jpeg" alt="Bolo de Baunilha com Morango" />
-          <div class="product-info">
-            <h3>Bolo de Baunilha com Morango</h3>
-            <p>
-              Bolo leve de baunilha com camadas de morangos frescos e
-              chantilly.
-            </p>
-            <p class="price">A partir de R$ 85,00</p>
-          </div>
+        <div>
+          <!--<img src="logo.jpeg" alt="">-->
         </div>
       </div>
-    </section>
 
-    <section>
-      <h2>Nossas Fatias</h2>
-      <div class="slices-container">
-        <div class="slice">
-          <img src="Fatia de Bolo de Chocolate Belga.jpeg" alt="Fatia de Bolo de Chocolate Belga" />
-          <div class="slice-info">
-            <h3>Fatia de Bolo de Chocolate Belga</h3>
-            <p>Uma fatia deliciosa de bolo de chocolate com ganache.</p>
-            <p class="price">R$ 15,00</p>
-          </div>
-        </div>
-
-        <div class="slice">
-          <img src="Fatia de Bolo de Cenoura com Cobertura de Chocolate.jpeg"
-            alt="Fatia de Bolo de Cenoura com Cobertura de Chocolate" />
-          <div class="slice-info">
-            <h3>Fatia de Bolo de Cenoura com Cobertura de Chocolate</h3>
-            <p>
-              Uma fatia fofa de bolo de cenoura com cobertura de chocolate.
-            </p>
-            <p class="price">R$ 12,00</p>
-          </div>
-        </div>
-
-        <div class="slice">
-          <img src="Fatia de Bolo Red Velvet.jpeg" alt="Fatia de Bolo Red Velvet" />
-          <div class="slice-info">
-            <h3>Fatia de Bolo Red Velvet</h3>
-            <p>Uma fatia deliciosa de bolo Red Velvet com cream cheese.</p>
-            <p class="price">R$ 18,00</p>
-          </div>
-        </div>
-
-        <div class="slice">
-          <img src="Fatia de Bolo de Baunilha com Morango.jpeg" alt="Fatia de Bolo de Baunilha com Morango" />
-          <div class="slice-info">
-            <h3>Fatia de Bolo de Baunilha com Morango</h3>
-            <p>Uma fatia refrescante de bolo de baunilha com morangos.</p>
-            <p class="price">R$ 14,00</p>
-          </div>
-        </div>
+      <!-- Substitua "logo.png" com o caminho da sua imagem de logo -->
+    </header>
+    <div class="container">
+      <div class="hero">
+        <h2>Transformando Cada Momento em Doces Memórias</h2>
+        <p>
+          Delicie-se com nossos bolos e fatias artesanais feitos com
+          ingredientes frescos e muito amor.
+        </p>
       </div>
-    </section>
 
-    <section>
-      <div class="order-form">
-        <h2>Faça Seu Pedido</h2>
-        <form id="orderForm">
-          <label for="productType">Escolha o tipo de produto:</label>
-          <select id="productType" name="productType" required>
-            <option value="" disabled selected>Selecione o tipo</option>
-            <option value="Bolo">Bolo</option>
-            <option value="Fatia">Fatia</option>
-          </select>
-  
-          <label for="cakeFlavor">Escolha o sabor:</label>
-          <select id="cakeFlavor" name="cakeFlavor" required>
-            <option value="" disabled selected>Selecione o sabor</option>
-            <!-- Opções de bolos -->
-            <option value="Bolo de Chocolate Belga" class="cakeOption">
-              Bolo de Chocolate Belga
-            </option>
-            <option value="Bolo de Cenoura com Cobertura de Chocolate" class="cakeOption">
-              Bolo de Cenoura com Cobertura de Chocolate
-            </option>
-            <option value="Bolo Red Velvet" class="cakeOption">
-              Bolo Red Velvet
-            </option>
-            <option value="Bolo de Baunilha com Morango" class="cakeOption">
-              Bolo de Baunilha com Morango
-            </option>
-            <!-- Opções de fatias -->
-            <option value="Fatia de Bolo de Chocolate Belga" class="sliceOption">
-              Fatia de Bolo de Chocolate Belga
-            </option>
-            <option value="Fatia de Bolo de Cenoura com Cobertura de Chocolate" class="sliceOption">
-              Fatia de Bolo de Cenoura com Cobertura de Chocolate
-            </option>
-            <option value="Fatia de Bolo Red Velvet" class="sliceOption">
-              Fatia de Bolo Red Velvet
-            </option>
-            <option value="Fatia de Bolo de Baunilha com Morango" class="sliceOption">
-              Fatia de Bolo de Baunilha com Morango
-            </option>
-          </select>
-  
-          <label for="quantity">Quantidade:</label>
-          <input type="number" id="quantity" name="quantity" min="1" value="1" required />
-  
-          <button type="button" onclick="sendOrder()">Enviar Pedido</button>
-        </form>
-      </div>
-    </section>
-  
+      <section>
+        <div class="video">
+          <video src="Video.mp4" autoplay loop muted playsinline></video>
+        </div>
+      </section>
 
-    </section>
+      <section>
+        <h2>Nossos Bolos</h2>
+        <div class="products-container">
+          <div class="product">
+            <img
+              src="Bolo de Chocolate Belga.jpeg"
+              alt="Bolo de Chocolate Belga"
+            />
+            <div class="product-info">
+              <h3>Bolo de Chocolate Belga</h3>
+              <p>
+                Camadas de bolo de chocolate com recheio cremoso e cobertura de
+                ganache.
+              </p>
+              <p class="price">A partir de R$ 90,00</p>
+            </div>
+          </div>
 
-    <section class="delivery-section">
-      <div class="delivery-content">
-        <h2>Consulte a Taxa de Entrega</h2>
-        <div class="delivery-form">
-          <img src="delivery.jpeg" alt="Motoboy" class="delivery-image" />
-          <form id="deliveryForm">
-            <label for="cep">CEP:</label>
-            <input type="text" id="cep" name="cep" placeholder="Digite seu CEP" />
+          <div class="product">
+            <img
+              src="Bolo de Cenoura com Cobertura de Chocolate.jpeg"
+              alt="Bolo de Cenoura com Cobertura de Chocolate"
+            />
+            <div class="product-info">
+              <h3>Bolo de Cenoura com Cobertura de Chocolate</h3>
+              <p>
+                Bolo fofinho de cenoura com cobertura de chocolate meio amargo e
+                nozes.
+              </p>
+              <p class="price">A partir de R$ 80,00</p>
+            </div>
+          </div>
 
-            <label for="endereco">Endereço:</label>
-            <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço" readonly />
+          <div class="product">
+            <img src="Bolo Red Velvet.jpeg" alt="Bolo Red Velvet" />
+            <div class="product-info">
+              <h3>Bolo Red Velvet</h3>
+              <p>
+                Bolo de massa leve e vermelha com recheio de cream cheese e
+                cobertura de veludo.
+              </p>
+              <p class="price">A partir de R$ 95,00</p>
+            </div>
+          </div>
 
-            <label for="bairro">Bairro:</label>
-            <input type="text" id="bairro" name="bairro" placeholder="Digite seu bairro" readonly />
+          <div class="product">
+            <img
+              src="Bolo de Baunilha com Morango.jpeg"
+              alt="Bolo de Baunilha com Morango"
+            />
+            <div class="product-info">
+              <h3>Bolo de Baunilha com Morango</h3>
+              <p>
+                Bolo leve de baunilha com camadas de morangos frescos e
+                chantilly.
+              </p>
+              <p class="price">A partir de R$ 85,00</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-            <label for="cidade">Cidade:</label>
-            <input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade" readonly />
+      <section>
+        <h2>Nossas Fatias</h2>
+        <div class="slices-container">
+          <div class="slice">
+            <img
+              src="Fatia de Bolo de Chocolate Belga.jpeg"
+              alt="Fatia de Bolo de Chocolate Belga"
+            />
+            <div class="slice-info">
+              <h3>Fatia de Bolo de Chocolate Belga</h3>
+              <p>Uma fatia deliciosa de bolo de chocolate com ganache.</p>
+              <p class="price">R$ 15,00</p>
+            </div>
+          </div>
 
-            <label for="valor-taxa">Valor da Taxa:</label>
-            <input type="text" id="valor-taxa" name="valor-taxa" placeholder="R$ 0,00" readonly />
+          <div class="slice">
+            <img
+              src="Fatia de Bolo de Cenoura com Cobertura de Chocolate.jpeg"
+              alt="Fatia de Bolo de Cenoura com Cobertura de Chocolate"
+            />
+            <div class="slice-info">
+              <h3>Fatia de Bolo de Cenoura com Cobertura de Chocolate</h3>
+              <p>
+                Uma fatia fofa de bolo de cenoura com cobertura de chocolate.
+              </p>
+              <p class="price">R$ 12,00</p>
+            </div>
+          </div>
 
-            <button type="button" id="calculateButton">Calcular Taxa</button>
+          <div class="slice">
+            <img
+              src="Fatia de Bolo Red Velvet.jpeg"
+              alt="Fatia de Bolo Red Velvet"
+            />
+            <div class="slice-info">
+              <h3>Fatia de Bolo Red Velvet</h3>
+              <p>Uma fatia deliciosa de bolo Red Velvet com cream cheese.</p>
+              <p class="price">R$ 18,00</p>
+            </div>
+          </div>
+
+          <div class="slice">
+            <img
+              src="Fatia de Bolo de Baunilha com Morango.jpeg"
+              alt="Fatia de Bolo de Baunilha com Morango"
+            />
+            <div class="slice-info">
+              <h3>Fatia de Bolo de Baunilha com Morango</h3>
+              <p>Uma fatia refrescante de bolo de baunilha com morangos.</p>
+              <p class="price">R$ 14,00</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="order-form">
+          <h2>Faça Seu Pedido</h2>
+          <form id="orderForm">
+            <label for="productType">Escolha o tipo de produto:</label>
+            <select id="productType" name="productType" required>
+              <option value="" disabled selected>Selecione o tipo</option>
+              <option value="Bolo">Bolo</option>
+              <option value="Fatia">Fatia</option>
+            </select>
+
+            <label for="cakeFlavor">Escolha o sabor:</label>
+            <select id="cakeFlavor" name="cakeFlavor" required>
+              <option value="" disabled selected>Selecione o sabor</option>
+              <!-- Opções de bolos -->
+              <option value="Bolo de Chocolate Belga" class="cakeOption">
+                Bolo de Chocolate Belga
+              </option>
+              <option
+                value="Bolo de Cenoura com Cobertura de Chocolate"
+                class="cakeOption"
+              >
+                Bolo de Cenoura com Cobertura de Chocolate
+              </option>
+              <option value="Bolo Red Velvet" class="cakeOption">
+                Bolo Red Velvet
+              </option>
+              <option value="Bolo de Baunilha com Morango" class="cakeOption">
+                Bolo de Baunilha com Morango
+              </option>
+              <!-- Opções de fatias -->
+              <option
+                value="Fatia de Bolo de Chocolate Belga"
+                class="sliceOption"
+              >
+                Fatia de Bolo de Chocolate Belga
+              </option>
+              <option
+                value="Fatia de Bolo de Cenoura com Cobertura de Chocolate"
+                class="sliceOption"
+              >
+                Fatia de Bolo de Cenoura com Cobertura de Chocolate
+              </option>
+              <option value="Fatia de Bolo Red Velvet" class="sliceOption">
+                Fatia de Bolo Red Velvet
+              </option>
+              <option
+                value="Fatia de Bolo de Baunilha com Morango"
+                class="sliceOption"
+              >
+                Fatia de Bolo de Baunilha com Morango
+              </option>
+            </select>
+
+            <label for="quantity">Quantidade:</label>
+            <input
+              type="number"
+              id="quantity"
+              name="quantity"
+              min="1"
+              value="1"
+              required
+            />
+
+            <button type="button" id="sendOrderButton">Enviar Pedido</button>
           </form>
         </div>
-      </div>
-    </section>
-    <h2>Formas de Pagamento</h2>
-    <section class="payment-section">
+      </section>
 
-      <div class="image-container">
-        <img src="pagamento.jpeg" alt="Formas de Pagamento">
-      </div>
-    </section>
+      <section class="delivery-section">
+        <div class="delivery-content">
+          <h2>Consulte a Taxa de Entrega</h2>
+          <div class="delivery-form">
+            <img src="delivery.jpeg" alt="Motoboy" class="delivery-image" />
+            <form id="deliveryForm">
+              <label for="cep">CEP:</label>
+              <input
+                type="text"
+                id="cep"
+                name="cep"
+                placeholder="Digite seu CEP"
+              />
 
-    <h2>Depoimentos</h2>
-    <section class="testimonial-section">
-      <div class="testimonial">
+              <label for="endereco">Endereço:</label>
+              <input
+                type="text"
+                id="endereco"
+                name="endereco"
+                placeholder="Digite seu endereço"
+                readonly
+              />
+
+              <label for="bairro">Bairro:</label>
+              <input
+                type="text"
+                id="bairro"
+                name="bairro"
+                placeholder="Digite seu bairro"
+                readonly
+              />
+
+              <label for="cidade">Cidade:</label>
+              <input
+                type="text"
+                id="cidade"
+                name="cidade"
+                placeholder="Digite sua cidade"
+                readonly
+              />
+
+              <label for="valor-taxa">Valor da Taxa:</label>
+              <input
+                type="text"
+                id="valor-taxa"
+                name="valor-taxa"
+                placeholder="R$ 0,00"
+                readonly
+              />
+
+              <button type="button" id="calculateButton">Calcular Taxa</button>
+            </form>
+          </div>
+        </div>
+      </section>
+      <h2>Formas de Pagamento</h2>
+      <section class="payment-section">
+        <div class="image-container">
+          <img src="pagamento.jpeg" alt="Formas de Pagamento" />
+        </div>
+      </section>
+
+      <h2>Depoimentos</h2>
+      <section class="testimonial-section">
+        <div class="testimonial">
+          <p>
+            "Os bolos da Doce Encanto são simplesmente maravilhosos! Perfeitos
+            para qualquer ocasião." - <strong>Beatriz C.</strong>
+          </p>
+        </div>
+        <div class="testimonial">
+          <p>
+            "Um verdadeiro deleite para o paladar. Recomendo a todos que amam um
+            bom bolo." - <strong>João P.</strong>
+          </p>
+        </div>
+      </section>
+
+      <h2>Entre em Contato</h2>
+      <section class="contact-section">
+        <p>Tem alguma dúvida ou precisa de ajuda? Entre em contato conosco!</p>
+        <p><strong>Telefone:</strong> (71) 98682-1061</p>
         <p>
-          "Os bolos da Doce Encanto são simplesmente maravilhosos! Perfeitos para qualquer ocasião." - <strong>Beatriz
-            C.</strong>
+          <strong>Email:</strong>
+          <a href="mailto:contato@doceencanto.com.br"
+            >contato@doceencanto.com.br</a
+          >
         </p>
-      </div>
-      <div class="testimonial">
-        <p>
-          "Um verdadeiro deleite para o paladar. Recomendo a todos que amam um bom bolo." - <strong>João P.</strong>
-        </p>
-      </div>
-    </section>
-
-    <h2>Entre em Contato</h2>
-    <section class="contact-section">
-      <p>Tem alguma dúvida ou precisa de ajuda? Entre em contato conosco!</p>
-      <p><strong>Telefone:</strong> (71) 98682-1061</p>
-      <p>
-        <strong>Email:</strong>
-        <a href="mailto:contato@doceencanto.com.br">contato@doceencanto.com.br</a>
-      </p>
-      <p><strong>Endereço:</strong> Rua das Delícias, 00, Salvador - BA</p>
-    </section>
+        <p><strong>Endereço:</strong> Rua das Delícias, 00, Salvador - BA</p>
+      </section>
       <section>
-        <a href="https://wa.me/5571986821061" class="whatsapp-button" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+        <a
+          href="https://wa.me/5571986821061"
+          class="whatsapp-button"
+          target="_blank"
+        >
+          <img
+            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg"
+            alt="WhatsApp"
+          />
         </a>
       </section>
-    <section>
-      <h2>Siga-nos nas Redes Sociais</h2>
-      <div class="social-links">
-        <a href="https://instagram.com/doceencanto" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
-        </a>
-        <a href="https://facebook.com/doceencanto" target="_blank">
-          <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
-            alt="Facebook" />
-        </a>
-      </div>
-    </section>
-  </div>
+      <section>
+        <h2>Siga-nos nas Redes Sociais</h2>
+        <div class="social-links">
+          <a href="https://instagram.com/doceencanto" target="_blank">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png"
+              alt="Instagram"
+            />
+          </a>
+          <a href="https://facebook.com/doceencanto" target="_blank">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg"
+              alt="Facebook"
+            />
+          </a>
+        </div>
+      </section>
+    </div>
 
-  <footer>
-    <p>&copy; 2024 Doce Encanto. Todos os direitos reservados.</p>
-    <p>Desenvolvido por Vinicius Santos | Contato: (71) 98682-1061</p>
-  </footer>
+    <footer>
+      <p>&copy; 2024 Doce Encanto. Todos os direitos reservados.</p>
+      <p>Desenvolvido por Vinicius Santos | Contato: (71) 98682-1061</p>
+    </footer>
 
-  <script>
-  // Bolo ou Fatia
-  document.addEventListener("DOMContentLoaded", function() {
-  const productTypeSelect = document.getElementById('productType');
-  const cakeOptions = document.querySelectorAll('.cakeOption');
-  const sliceOptions = document.querySelectorAll('.sliceOption');
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const productTypeSelect = document.getElementById("productType");
+        const cakeOptions = document.querySelectorAll(".cakeOption");
+        const sliceOptions = document.querySelectorAll(".sliceOption");
 
-  function filterOptions() {
-    const selectedType = productTypeSelect.value;
+        function filterOptions() {
+          const selectedType = productTypeSelect.value;
 
-    cakeOptions.forEach(option => {
-      option.style.display = (selectedType === 'Bolo' || selectedType === '') ? 'block' : 'none';
-    });
+          cakeOptions.forEach((option) => {
+            option.style.display =
+              selectedType === "Bolo" || selectedType === "" ? "block" : "none";
+          });
 
-    sliceOptions.forEach(option => {
-      option.style.display = (selectedType === 'Fatia' || selectedType === '') ? 'block' : 'none';
-    });
-  }
+          sliceOptions.forEach((option) => {
+            option.style.display =
+              selectedType === "Fatia" || selectedType === ""
+                ? "block"
+                : "none";
+          });
+        }
 
-  // Adiciona o evento de 'input' para capturar mudanças, incluindo em dispositivos móveis
-  productTypeSelect.addEventListener('input', filterOptions);
+        productTypeSelect.addEventListener("change", filterOptions);
+        filterOptions(); // Inicializa o filtro ao carregar a página
 
-  // Inicializa o filtro com o valor padrão selecionado
-  filterOptions();
-});
-function sendOrder() {
-  const productType = document.getElementById('productType').value;
-  const selectedOptions = [...document.querySelectorAll('.cakeOption:checked, .sliceOption:checked')];
-  const quantity = document.getElementById('quantity').value; // Captura o valor da quantidade
+        // CEP
+        document.getElementById("cep").addEventListener("blur", function () {
+          const cep = this.value.replace(/\D/g, ""); // Remove qualquer caractere não numérico
+          if (cep.length === 8) {
+            fetch(`https://viacep.com.br/ws/${cep}/json/`)
+              .then((response) => response.json())
+              .then((data) => {
+                if (!data.erro) {
+                  document.getElementById("endereco").value = data.logradouro;
+                  document.getElementById("bairro").value = data.bairro;
+                  document.getElementById("cidade").value = data.localidade;
+                  document.getElementById("estado").value = data.uf;
+                } else {
+                  alert("CEP não encontrado.");
+                }
+              });
+            //.catch(error => alert('Erro ao buscar o CEP.'));
+          } else {
+            alert("CEP inválido.");
+          }
+        });
 
-  // Construa a mensagem para o WhatsApp
-  let message = `Olá, gostaria de fazer um pedido.\n\nTipo: ${productType}\n\nSabor: `;
+        document
+          .getElementById("calculateButton")
+          .addEventListener("click", function () {
+            const bairro = document.getElementById("bairro").value;
+            const taxa = calcularTaxaDeEntrega(bairro);
+            document.getElementById("valor-taxa").value = `R$ ${taxa.toFixed(
+              2
+            )}`;
+          });
 
-  selectedOptions.forEach(option => {
-    message += `${option.value}\n`;
-  });
+        function calcularTaxaDeEntrega(bairro) {
+          const taxas = {
+            "Pero Vaz": 15.0,
+            Liberdade: 20.0,
+            Barra: 18.0,
+            // Adicione mais bairros e suas taxas aqui
+          };
+          return taxas[bairro] || 25.0; // Taxa padrão se o bairro não estiver na lista
+        }
 
-  message += `\nQuantidade: ${quantity}`;
+        function sendOrder() {
+          const form = document.getElementById("orderForm");
+          if (form.checkValidity()) {
+            const productType = document.getElementById("productType").value;
+            const selectedOptions = [
+              ...document.querySelectorAll(
+                ".cakeOption:checked, .sliceOption:checked"
+              ),
+            ];
+            const quantity = document.getElementById("quantity").value;
 
-  // Encode a mensagem para a URL do WhatsApp
-  const encodedMessage = encodeURIComponent(message);
+            // Construa a mensagem para o WhatsApp
+            let message = `Olá, gostaria de fazer um pedido:\n\nTipo: ${productType}\nSabor: `;
 
-  const phoneNumber = '5571986821061';  // Substitua pelo número de destino
+            selectedOptions.forEach((option) => {
+              message += `${option.value}\n`;
+            });
 
-  // Monta o link para envio no WhatsApp
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+            message += `\nQuantidade: ${quantity}`;
 
-  // Redireciona o usuário para o WhatsApp
-  window.location.href = whatsappUrl;
-}
+            // Encode a mensagem para a URL do WhatsApp
+            const encodedMessage = encodeURIComponent(message);
 
-    // CEP
-    document.getElementById('cep').addEventListener('blur', function () {
-      const cep = this.value.replace(/\D/g, ''); // Remove qualquer caractere não numérico
-      if (cep.length === 8) {
-        fetch(`https://viacep.com.br/ws/${cep}/json/`)
-          .then(response => response.json())
-          .then(data => {
-            if (!data.erro) {
-              document.getElementById('endereco').value = data.logradouro;
-              document.getElementById('bairro').value = data.bairro;
-              document.getElementById('cidade').value = data.localidade;
-              document.getElementById('estado').value = data.uf;
-            } else {
-              alert('CEP não encontrado.');
-            }
-          })
-          .catch(error => alert('Buscar o CEP?'));
-      } else {
-        alert('CEP inválido.');
-      }
-    });
+            const phoneNumber = "5571986821061"; // Substitua pelo número de destino
 
-    document.getElementById('calculateButton').addEventListener('click', function () {
-      const bairro = document.getElementById('bairro').value;
-      const taxa = calcularTaxaDeEntrega(bairro);
-      document.getElementById('valor-taxa').value = `R$ ${taxa.toFixed(2)}`;
-    });
+            // Monta o link para envio no WhatsApp
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
 
-    // Exemplo de função de cálculo da taxa (substitua com a lógica real)
-    function calcularTaxaDeEntrega(bairro) {
-      // Defina sua lógica para calcular a taxa aqui
-      // Exemplo básico: taxa fixa por bairro
-      const taxas = {
-        'Pero Vaz': 15.00,
-        'Liberdade': 20.00,
-        'Barra': 18.00,
-        // Adicione mais bairros e suas taxas aqui
-      };
-      return taxas[bairro] || 25.00; // Taxa padrão se o bairro não estiver na lista
-    }
+            // Redireciona o usuário para o WhatsApp
+            window.location.href = whatsappUrl;
+          } else {
+            alert("Por favor, preencha todos os campos obrigatórios.");
+          }
+        }
 
-  </script>
-
-</body>
-
+        // Adiciona o evento de 'click' ao botão de envio
+        document
+          .getElementById("sendOrderButton")
+          .addEventListener("click", sendOrder);
+      });
+    </script>
+  </body>
 </html>
