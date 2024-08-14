@@ -31,7 +31,7 @@
       padding: 1rem;
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       z-index: 1000;
       /* Garante que o cabeçalho fique acima de outros elementos */
       box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
@@ -40,28 +40,42 @@
       /* Ajuste conforme necessário */
     }
 
-    .logo {
-      position: relative;
-      max-width: 100px;
-      /* Ajuste o tamanho da logo conforme necessário */
-      height: auto;
-      margin-left: 250px;
-      margin-right: 280px;
-    }
-
     .header-text {
+      display: flex;
+      align-items: center;
       text-align: center;
-      flex: 1;
+      /* Alinha a imagem e o texto verticalmente */
+      justify-content: center;
+      /* Centraliza o conteúdo dentro do header-text */
     }
 
-    header h1 {
+    /* Estilo para a imagem */
+    .header-text img {
+      max-height: 90px;
+      /* Ajuste o tamanho da imagem conforme necessário */
+      margin-right: 10px;
+      margin-left: 10px;
+      /* Espaço entre a imagem e o texto */
+      object-fit: contain;
+      /* Garante que a imagem mantenha sua proporção */
+    }
+
+    /* Estilo para o título e descrição */
+    .header-text h1 {
       margin: 0;
-      font-size: 2.5rem;
+      text-align: center;
+      font-size: 2em;
+      /* Ajuste o tamanho do texto conforme necessário */
+      color: #FFFFFF;
+      /* Ajuste a cor do texto conforme necessário */
     }
 
-    header p {
-      margin: 0.5rem 0;
-      font-size: 1.2rem;
+    .header-text p {
+      margin: 0;
+      font-size: 1em;
+      /* Ajuste o tamanho do texto conforme necessário */
+      color: #FFFFFF;
+      /* Ajuste a cor do texto conforme necessário */
     }
 
     .container {
@@ -350,131 +364,188 @@
         padding: 0.4rem 0.8rem;
       }
     }
-     /* Estilo para a seção de formas de pagamento */
-.payment-section {
-  margin: 20px auto;
-  padding: 20px;
-  max-width: 100%px; /* Limita a largura máxima da seção */
-  background-color: #f9f9f9; /* Cor de fundo suave */
-  border-radius: 8px; /* Bordas arredondadas */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
-  text-align: center; /* Centraliza o texto e o conteúdo */
-}
 
-/* Estilo para o título da seção */
-.payment-section h2 {
-  margin-bottom: 15px;
-  color: #333; /* Cor do texto do título */
-  font-size: 1.5em; /* Tamanho da fonte */
-  font-weight: bold; /* Negrito */
-}
+    /* Estilo para a seção de formas de pagamento */
+    .payment-section {
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 100%px;
+      /* Limita a largura máxima da seção */
+      background-color: #f9f9f9;
+      /* Cor de fundo suave */
+      border-radius: 8px;
+      /* Bordas arredondadas */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      /* Sombra leve */
+      text-align: center;
+      /* Centraliza o texto e o conteúdo */
+    }
 
-/* Estilo para o contêiner da imagem */
-.image-container {
-  display: flex;
-  justify-content: center; /* Centraliza a imagem horizontalmente */
-  margin-top: 10px; /* Espaço acima do contêiner da imagem */
-}
+    /* Estilo para o título da seção */
+    .payment-section h2 {
+      margin-bottom: 15px;
+      color: #333;
+      /* Cor do texto do título */
+      font-size: 1.5em;
+      /* Tamanho da fonte */
+      font-weight: bold;
+      /* Negrito */
+    }
 
-/* Estilo para a imagem */
-.image-container img {
-  max-width: 30%; /* Garante que a imagem não ultrapasse a largura do contêiner */
-  height: auto; /* Mantém a proporção da imagem */
-  border-radius: 8px; /* Bordas arredondadas na imagem */
-}
-/* Estilo para a seção de depoimentos */
-.testimonial-section {
-  margin: 20px auto;
-  padding: 20px;
-  max-width: 100%; /* Limita a largura máxima da seção */
-  background-color: #f9f9f9; /* Cor de fundo */
-  border-radius: 8px; /* Bordas arredondadas */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
-}
+    /* Estilo para o contêiner da imagem */
+    .image-container {
+      display: flex;
+      justify-content: center;
+      /* Centraliza a imagem horizontalmente */
+      margin-top: 10px;
+      /* Espaço acima do contêiner da imagem */
+    }
 
-/* Estilo para o título da seção de depoimentos */
-.testimonial-section h2 {
-  margin-bottom: 15px;
-  color: #333; /* Cor do texto do título */
-  font-size: 1.5em; /* Tamanho da fonte */
-  font-weight: bold; /* Negrito */
-  text-align: center; /* Centraliza o título */
-}
+    /* Estilo para a imagem */
+    .image-container img {
+      max-width: 30%;
+      /* Garante que a imagem não ultrapasse a largura do contêiner */
+      height: auto;
+      /* Mantém a proporção da imagem */
+      border-radius: 8px;
+      /* Bordas arredondadas na imagem */
+    }
 
-/* Estilo para cada bloco de depoimento */
-.testimonial {
-  margin-bottom: 15px;
-  padding: 10px;
-  background-color: #fff; /* Fundo branco para destacar o depoimento */
-  border-left: 4px solid #4CAF50; /* Linha lateral verde para destaque */
-  border-radius: 4px; /* Bordas arredondadas */
-}
+    /* Estilo para a seção de depoimentos */
+    .testimonial-section {
+      margin: 20px auto;
+      padding: 20px;
+      max-width: 100%;
+      /* Limita a largura máxima da seção */
+      background-color: #f9f9f9;
+      /* Cor de fundo */
+      border-radius: 8px;
+      /* Bordas arredondadas */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      /* Sombra leve */
+    }
 
-/* Estilo para o texto dentro dos depoimentos */
-.testimonial p {
-  margin: 0; /* Remove a margem padrão */
-  color: #555; /* Cor do texto dos depoimentos */
-  font-size: 1em; /* Tamanho da fonte */
-  font-style: italic; /* Estilo em itálico */
-}
-/* Estilo para a seção de contato */
-.contact-section {
-  padding: 20px;
-  background-color: #f9f9f9; /* Cor de fundo igual à seção de formas de pagamento */
-  border-radius: 8px; /* Bordas arredondadas */
-  max-width: 100%; /* Limita a largura máxima da seção */
-  margin: 20px auto; /* Centraliza a seção horizontalmente */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
-}
+    /* Estilo para o título da seção de depoimentos */
+    .testimonial-section h2 {
+      margin-bottom: 15px;
+      color: #333;
+      /* Cor do texto do título */
+      font-size: 1.5em;
+      /* Tamanho da fonte */
+      font-weight: bold;
+      /* Negrito */
+      text-align: center;
+      /* Centraliza o título */
+    }
 
-/* Estilo para o texto da seção de contato */
-.contact-section p {
-  margin: 10px 0; /* Margem entre os parágrafos */
-  color: #333; /* Cor do texto */
-  font-size: 1em; /* Tamanho da fonte */
-}
+    /* Estilo para cada bloco de depoimento */
+    .testimonial {
+      margin-bottom: 15px;
+      padding: 10px;
+      background-color: #fff;
+      /* Fundo branco para destacar o depoimento */
+      border-left: 4px solid #4CAF50;
+      /* Linha lateral verde para destaque */
+      border-radius: 4px;
+      /* Bordas arredondadas */
+    }
 
-/* Estilo para o link de email */
-.contact-section a {
-  color: #007BFF; /* Cor azul para links */
-  text-decoration: none; /* Remove o sublinhado dos links */
-}
+    /* Estilo para o texto dentro dos depoimentos */
+    .testimonial p {
+      margin: 0;
+      /* Remove a margem padrão */
+      color: #555;
+      /* Cor do texto dos depoimentos */
+      font-size: 1em;
+      /* Tamanho da fonte */
+      font-style: italic;
+      /* Estilo em itálico */
+    }
 
-/* Estilo para o link de email ao passar o mouse */
-.contact-section a:hover {
-  text-decoration: underline; /* Sublinhado ao passar o mouse */
-}
+    /* Estilo para a seção de contato */
+    .contact-section {
+      padding: 20px;
+      background-color: #f9f9f9;
+      /* Cor de fundo igual à seção de formas de pagamento */
+      border-radius: 8px;
+      /* Bordas arredondadas */
+      max-width: 100%;
+      /* Limita a largura máxima da seção */
+      margin: 20px auto;
+      /* Centraliza a seção horizontalmente */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      /* Sombra leve */
+    }
 
-/* Estilo para o botão do WhatsApp */
-.whatsapp-button {
-  display: inline-block;
-  padding: 10px 20px;
-  margin-top: 15px;
-  background-color: #25D366; /* Cor verde do WhatsApp */
-  color: #fff; /* Cor do texto do botão */
-  border-radius: 5px; /* Bordas arredondadas */
-  text-decoration: none; /* Remove o sublinhado */
-  font-weight: bold; /* Negrito */
-  text-align: center; /* Centraliza o texto */
-  font-size: 1em; /* Tamanho da fonte */
-}
+    /* Estilo para o texto da seção de contato */
+    .contact-section p {
+      margin: 10px 0;
+      /* Margem entre os parágrafos */
+      color: #333;
+      /* Cor do texto */
+      font-size: 1em;
+      /* Tamanho da fonte */
+    }
 
-/* Estilo para o botão do WhatsApp ao passar o mouse */
-.whatsapp-button:hover {
-  background-color: #1EBE5F; /* Cor verde mais escura ao passar o mouse */
-}
+    /* Estilo para o link de email */
+    .contact-section a {
+      color: #007BFF;
+      /* Cor azul para links */
+      text-decoration: none;
+      /* Remove o sublinhado dos links */
+    }
 
+    /* Estilo para o link de email ao passar o mouse */
+    .contact-section a:hover {
+      text-decoration: underline;
+      /* Sublinhado ao passar o mouse */
+    }
+
+    /* Estilo para o botão do WhatsApp */
+    .whatsapp-button {
+      display: inline-block;
+      padding: 10px 20px;
+      margin-top: 15px;
+      background-color: #25D366;
+      /* Cor verde do WhatsApp */
+      color: #fff;
+      /* Cor do texto do botão */
+      border-radius: 5px;
+      /* Bordas arredondadas */
+      text-decoration: none;
+      /* Remove o sublinhado */
+      font-weight: bold;
+      /* Negrito */
+      text-align: center;
+      /* Centraliza o texto */
+      font-size: 1em;
+      /* Tamanho da fonte */
+    }
+
+    /* Estilo para o botão do WhatsApp ao passar o mouse */
+    .whatsapp-button:hover {
+      background-color: #1EBE5F;
+      /* Cor verde mais escura ao passar o mouse */
+    }
   </style>
 </head>
 
 <body>
   <header>
     <!-- Substitua "logo.png" com o caminho da sua imagem de logo -->
-
     <div class="header-text">
-      <h1>Doce Encanto</h1>
-      <p>Bolos e Fatias Sob Medida para Toda Ocasião</p>
+      <div>
+        <img src="logo.jpeg" alt="">
+      </div>
+      <div>
+        <h1>Doce Encanto</h1>
+        <p>Bolos e Fatias Sob Medida para Toda Ocasião</p>
+      </div>
+      <div>
+        <img src="logo.jpeg" alt="">
+      </div>
     </div>
+
 
     <!-- Substitua "logo.png" com o caminho da sua imagem de logo -->
   </header>
@@ -600,7 +671,7 @@
             <option value="Bolo">Bolo</option>
             <option value="Fatia">Fatia</option>
           </select>
-
+  
           <label for="cakeFlavor">Escolha o sabor:</label>
           <select id="cakeFlavor" name="cakeFlavor" required>
             <option value="" disabled selected>Selecione o sabor</option>
@@ -631,14 +702,15 @@
               Fatia de Bolo de Baunilha com Morango
             </option>
           </select>
-
+  
           <label for="quantity">Quantidade:</label>
           <input type="number" id="quantity" name="quantity" min="1" value="1" required />
-
+  
           <button type="button" onclick="sendOrder()">Enviar Pedido</button>
         </form>
       </div>
     </section>
+  
 
     </section>
 
@@ -650,19 +722,19 @@
           <form id="deliveryForm">
             <label for="cep">CEP:</label>
             <input type="text" id="cep" name="cep" placeholder="Digite seu CEP" />
-            
+
             <label for="endereco">Endereço:</label>
             <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço" readonly />
-            
+
             <label for="bairro">Bairro:</label>
             <input type="text" id="bairro" name="bairro" placeholder="Digite seu bairro" readonly />
-            
+
             <label for="cidade">Cidade:</label>
             <input type="text" id="cidade" name="cidade" placeholder="Digite sua cidade" readonly />
-            
+
             <label for="valor-taxa">Valor da Taxa:</label>
             <input type="text" id="valor-taxa" name="valor-taxa" placeholder="R$ 0,00" readonly />
-            
+
             <button type="button" id="calculateButton">Calcular Taxa</button>
           </form>
         </div>
@@ -670,17 +742,18 @@
     </section>
     <h2>Formas de Pagamento</h2>
     <section class="payment-section">
-      
+
       <div class="image-container">
         <img src="pagamento.jpeg" alt="Formas de Pagamento">
       </div>
     </section>
-    
+
     <h2>Depoimentos</h2>
     <section class="testimonial-section">
       <div class="testimonial">
         <p>
-          "Os bolos da Doce Encanto são simplesmente maravilhosos! Perfeitos para qualquer ocasião." - <strong>Beatriz C.</strong>
+          "Os bolos da Doce Encanto são simplesmente maravilhosos! Perfeitos para qualquer ocasião." - <strong>Beatriz
+            C.</strong>
         </p>
       </div>
       <div class="testimonial">
@@ -689,7 +762,7 @@
         </p>
       </div>
     </section>
-    
+
     <h2>Entre em Contato</h2>
     <section class="contact-section">
       <p>Tem alguma dúvida ou precisa de ajuda? Entre em contato conosco!</p>
@@ -701,7 +774,7 @@
       <p><strong>Endereço:</strong> Rua das Delícias, 00, Salvador - BA</p>
       <a href="https://wa.me/5571986821061" class="whatsapp-button" target="_blank">WhatsApp</a>
     </section>
-    
+
     <section>
       <h2>Siga-nos nas Redes Sociais</h2>
       <div class="social-links">
@@ -717,44 +790,41 @@
   </div>
 
   <footer>
+    <p>Doce Encanto - Transformando Momentos em Doces Memórias.</p>
     <p>&copy; 2024 Doce Encanto. Todos os direitos reservados.</p>
     <p>Desenvolvido por Vinicius Santos | Contato: (71) 98682-1061</p>
   </footer>
 
   <script>
-    document.addEventListener("DOMContentLoaded", function () {
-    document.getElementById("productType").addEventListener("change", function () {
-      var productType = this.value;
-      var cakeOptions = document.querySelectorAll(".cakeOption");
-      var sliceOptions = document.querySelectorAll(".sliceOption");
+  // Bolo ou Fatia
+   document.addEventListener("DOMContentLoaded", function() {
+      const productTypeSelect = document.getElementById('productType');
+      const cakeFlavorSelect = document.getElementById('cakeFlavor');
+      const cakeOptions = document.querySelectorAll('.cakeOption');
+      const sliceOptions = document.querySelectorAll('.sliceOption');
 
-      cakeOptions.forEach((option) => {
-        option.style.display = productType === "Bolo" ? "block" : "none";
-      });
-
-      sliceOptions.forEach((option) => {
-        option.style.display = productType === "Fatia" ? "block" : "none";
-      });
-
-      // Resetear o sabor selecionado se o tipo de produto for alterado
-      document.getElementById("cakeFlavor").value = "";
-    });
-
-    document.querySelector("button[type='button']").addEventListener("click", function() {
-      var productType = document.getElementById("productType").value;
-      var cakeFlavor = document.getElementById("cakeFlavor").value;
-      var quantity = document.getElementById("quantity").value;
-
-      if (!productType || !cakeFlavor || !quantity) {
-        alert("Por favor, preencha todos os campos.");
-        return;
+      function filterOptions() {
+        const selectedType = productTypeSelect.value;
+        
+        cakeOptions.forEach(option => {
+          option.style.display = (selectedType === 'Bolo' || selectedType === '') ? 'block' : 'none';
+        });
+        
+        sliceOptions.forEach(option => {
+          option.style.display = (selectedType === 'Fatia' || selectedType === '') ? 'block' : 'none';
+        });
       }
 
-      var message = `Olá, gostaria de fazer um pedido:\n\nTipo: ${productType}\nSabor: ${cakeFlavor}\nQuantidade: ${quantity}\n\nObrigado!`;
-      var whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
-      window.open(whatsappUrl, "_blank");
+      productTypeSelect.addEventListener('change', filterOptions);
+
+      // Initialize filter based on the default selected value
+      filterOptions();
     });
-    });
+
+    function sendOrder() {
+      // Função de envio de pedido
+      alert('Pedido enviado!');
+    }
 
     // CEP
     document.getElementById('cep').addEventListener('blur', function () {
