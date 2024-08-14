@@ -535,14 +535,14 @@
     <!-- Substitua "logo.png" com o caminho da sua imagem de logo -->
     <div class="header-text">
       <div>
-        <img src="logo.jpeg" alt="">
+        <!--<img src="logo.jpeg" alt="">-->
       </div>
       <div>
         <h1>Doce Encanto</h1>
         <p>Bolos e Fatias Sob Medida para Toda Ocasião</p>
       </div>
       <div>
-        <img src="logo.jpeg" alt="">
+        <!--<img src="logo.jpeg" alt="">-->
       </div>
     </div>
 
@@ -797,34 +797,36 @@
 
   <script>
   // Bolo ou Fatia
-   document.addEventListener("DOMContentLoaded", function() {
-      const productTypeSelect = document.getElementById('productType');
-      const cakeFlavorSelect = document.getElementById('cakeFlavor');
-      const cakeOptions = document.querySelectorAll('.cakeOption');
-      const sliceOptions = document.querySelectorAll('.sliceOption');
+  document.addEventListener("DOMContentLoaded", function() {
+  const productTypeSelect = document.getElementById('productType');
+  const cakeOptions = document.querySelectorAll('.cakeOption');
+  const sliceOptions = document.querySelectorAll('.sliceOption');
 
-      function filterOptions() {
-        const selectedType = productTypeSelect.value;
-        
-        cakeOptions.forEach(option => {
-          option.style.display = (selectedType === 'Bolo' || selectedType === '') ? 'block' : 'none';
-        });
-        
-        sliceOptions.forEach(option => {
-          option.style.display = (selectedType === 'Fatia' || selectedType === '') ? 'block' : 'none';
-        });
-      }
+  function filterOptions() {
+    const selectedType = productTypeSelect.value;
 
-      productTypeSelect.addEventListener('change', filterOptions);
-
-      // Initialize filter based on the default selected value
-      filterOptions();
+    cakeOptions.forEach(option => {
+      option.style.display = (selectedType === 'Bolo' || selectedType === '') ? 'block' : 'none';
     });
 
-    function sendOrder() {
-      // Função de envio de pedido
-      alert('Pedido enviado!');
-    }
+    sliceOptions.forEach(option => {
+      option.style.display = (selectedType === 'Fatia' || selectedType === '') ? 'block' : 'none';
+    });
+  }
+
+  // Adicionando eventos para garantir a captura em dispositivos móveis
+  productTypeSelect.addEventListener('change', filterOptions);
+  productTypeSelect.addEventListener('click', filterOptions);
+  productTypeSelect.addEventListener('touchend', filterOptions);
+
+  // Inicializa o filtro com o valor padrão selecionado
+  filterOptions();
+});
+
+function sendOrder() {
+  // Função de envio de pedido
+  alert('Pedido enviado!');
+}
 
     // CEP
     document.getElementById('cep').addEventListener('blur', function () {
