@@ -824,8 +824,27 @@
 });
 
 function sendOrder() {
-  // Função de envio de pedido
-  alert('Pedido enviado!');
+  const productType = document.getElementById('productType').value;
+  const selectedOptions = [...document.querySelectorAll('.cakeOption:checked, .sliceOption:checked')];
+  
+  // Construa a mensagem para o WhatsApp
+  let message = `Pedido:\nTipo de Produto: ${productType}\nOpções Selecionadas:\n`;
+
+  selectedOptions.forEach(option => {
+    message += `- ${option.value}\n`;
+  });
+
+  // Encode a mensagem para a URL do WhatsApp
+  const encodedMessage = encodeURIComponent(message);
+
+ 
+  const phoneNumber = '5571986821061';  // Substitua pelo número de destino
+
+  // Monta o link para envio no WhatsApp
+  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+
+  // Redireciona o usuário para o WhatsApp
+  window.location.href = whatsappUrl;
 }
 
     // CEP
